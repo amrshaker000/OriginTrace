@@ -42,7 +42,7 @@ This agent analyzes user inquiries and provides structured device recommendation
 
 ## 📦 Installation
 
-```bash
+
 # Clone the repository
 git clone <repository-url>
 cd ai-agent
@@ -66,7 +66,7 @@ ai-agent/
 
 ---
 
-##💡 Notes
+## 💡 Notes
 
 app.py serves user requests with AI-powered recommendations using the fine-tuned Phi-3 Mini model from Hugging Face.
 
@@ -78,7 +78,7 @@ requirements.txt lists necessary Python packages: Transformers, PyTorch, FastAPI
 
 ---
 
-##🔮 Future Roadmap
+## 🔮 Future Roadmap
 
 Integration with OriginTrace platform for real-time device certification queries
 
