@@ -43,14 +43,15 @@ This agent analyzes user inquiries and provides structured device recommendation
 ## 📦 Installation
 
 
-# Clone the repository
+### Clone the repository
+
 git clone <repository-url>
 cd ai-agent
 
-# Install dependencies
+### Install dependencies
 pip install -r requirements.txt
 
-# Set environment variables
+### Set environment variables
 export HF_TOKEN="your_huggingface_token"   # Linux/macOS
 set HF_TOKEN=your_huggingface_token        # Windows
 
