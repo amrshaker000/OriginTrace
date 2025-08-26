@@ -38,6 +38,7 @@ This agent analyzes user inquiries and provides structured device recommendation
 
 **Frontend (Optional / Integration)**
 - React 18 with TypeScript – For web dashboards integration  
+
 - Tailwind CSS & Framer Motion – For styling and animations in UI components  
 
 **Security & Deployment**
