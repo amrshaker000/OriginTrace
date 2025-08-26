@@ -1,11 +1,4 @@
-# Phi3 AI Agent for OriginTrace
 
-![Python](https://img.shields.io/badge/Python-3.11+-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-High%20Performance-green)
-![Hugging Face](https://img.shields.io/badge/HuggingFace-Model-orange)
-![LoRA](https://img.shields.io/badge/LoRA-Fine--Tuned-purple)
-
----
 
 ## 🚀 Overview
 The Phi3 AI Agent is a specialized backend interface for OriginTrace, leveraging the fine-tuned Phi-3 Mini model with LoRA adapters.  
@@ -61,6 +54,8 @@ pip install -r requirements.txt
 export HF_TOKEN="your_huggingface_token"   # Linux/macOS
 set HF_TOKEN=your_huggingface_token        # Windows
 
+---
+
 ## 📁 Project Structure
 ai-agent/
 ├── app.py                  # FastAPI main application; loads the fine-tuned Phi-3 Mini model from Hugging Face Hub
@@ -68,6 +63,8 @@ ai-agent/
 ├── train_dataset.jsonl     # Training dataset (JSONL format)
 ├── requirements.txt        # Python dependencies
 ├── README.md               # Project documentation
+
+---
 
 ##💡 Notes
 
@@ -78,6 +75,8 @@ Model_training.py is used for local fine-tuning with LoRA adapters.
 train_dataset.jsonl contains few-shot conversation examples for training.
 
 requirements.txt lists necessary Python packages: Transformers, PyTorch, FastAPI, Pydantic, etc.
+
+---
 
 ##🔮 Future Roadmap
 
