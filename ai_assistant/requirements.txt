@@ -1,0 +1,6 @@
+regex
+fastapi
+uvicorn
+torch
+transformers
+pydantic
