@@ -1,149 +1,90 @@
-OriginTrace – Secure Platform for Buying & Selling Used Electronics
+# 🌐 OriginTrace – Secure Platform for Buying & Selling Used Electronics
 
-OriginTrace is a modern, full-stack Web 2 platform designed to make buying and selling used electronics safe, transparent, and reliable.
-With integrated device inspection reports, AI-powered assistant, and a seamless marketplace, OriginTrace ensures both buyers and sellers enjoy a smooth and trustworthy experience.
+![React](https://img.shields.io/badge/Frontend-React%2018-61DBFB?style=flat&logo=react)
+![TailwindCSS](https://img.shields.io/badge/Styling-TailwindCSS-38B2AC?style=flat&logo=tailwind-css)
+![Vite](https://img.shields.io/badge/Bundler-Vite-646CFF?style=flat&logo=vite)
+![Laravel](https://img.shields.io/badge/Backend-Laravel-FF2D20?style=flat&logo=laravel)
+![MySQL](https://img.shields.io/badge/Database-MySQL-4479A1?style=flat&logo=mysql)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat)
 
-🚀 Overview
+**OriginTrace** is a **modern full-stack Web 2 platform** designed to make **buying and selling used electronics** safe, transparent, and reliable.  
+With **integrated device inspection reports**, an **AI-powered assistant**, and a **seamless marketplace**, OriginTrace ensures a **smooth and trustworthy experience** for both buyers and sellers.
 
-OriginTrace helps transform the risky process of buying used devices into a secure and verified experience.
-Before any device is listed, it goes through a technical inspection to ensure its condition and provide a detailed report.
-The platform also integrates an AI assistant to guide users, answer queries, and simplify the process.
+---
 
-✨ Key Features
+## 🚀 Overview
 
-Device Certification → Multi-step inspection with detailed reports.
+OriginTrace transforms the risky process of buying used devices into a **secure, verified experience**.  
+Before any device is listed, it goes through a **multi-step inspection process** to generate a **detailed technical report**.  
+The platform also integrates an **AI assistant** to guide users, answer queries, and simplify their journey.
 
-AI-Powered Assistant → Integrated chatbot connected to the backend via API for real-time support.
+---
 
-Secure Marketplace → Browse and purchase verified devices with confidence.
+## ✨ Key Features
 
-Search & Filtering → Quickly find the devices you need using advanced filters.
+| Feature                | Description |
+|-----------------------|-------------|
+| 🔐 **Device Certification** | Multi-step device inspection with detailed reports. |
+| 🤖 **AI-Powered Assistant** | Integrated chatbot connected via API for real-time support. |
+| 🛍️ **Secure Marketplace** | Browse and purchase verified devices confidently. |
+| 🔍 **Advanced Search & Filtering** | Quickly find the right device using smart filters. |
+| 📱 **Responsive & Modern UI** | Fully optimized for mobile-first experience. |
+| ⚡ **Fast & Lightweight** | High-performance build powered by **Vite** and **Tailwind**. |
 
-Responsive & Modern UI → Built with a mobile-first approach.
+---
 
-Fast & Lightweight → Optimized performance using Vite and Tailwind.
+## 🛠️ Technology Stack
 
-🛠️ Technology Stack
-Frontend
+### **Frontend**
+- ⚛️ **React 18 + Vite** → Fast, modern, and efficient development.
+- 🎨 **Tailwind CSS** → Fully responsive and elegant UI.
+- ✨ **Framer Motion** → Smooth animations and transitions.
+- 🧭 **React Router** → Page routing and navigation.
+- 🖼 **Lucide React Icons** → Clean and modern icons.
 
-React 18 + Vite → Fast, modern, and efficient development.
+### **Backend**
+- 🐘 **PHP Laravel** → Core server-side logic and APIs.
+- 🗄️ **MySQL** → Relational database for secure data storage.
+- 🔗 **RESTful APIs** → Seamless integration between frontend and backend.
 
-Tailwind CSS → Fully responsive and elegant design.
+### **AI Integration**
+- 🤖 **AI Assistant** → Built using third-party APIs.
+- Fully integrated into frontend & backend for **dynamic responses**.
 
-Framer Motion → Smooth animations and transitions.
+---
 
-React Router → Page routing and navigation.
+## 🎨 Design Highlights
 
-Lucide React → Icon library for a clean UI.
+- 🌓 **Dark Mode First** → Default dark UI with light mode toggle.
+- 🪟 **Modern UI/UX** → Glassmorphism, gradients, and smooth transitions.
+- ♿ **Accessibility** → WCAG-compliant design for improved usability.
+- 📱 **Fully Responsive** → Optimized for mobile, tablet, and desktop.
 
-Backend
+---
 
-PHP Laravel → Core server-side logic and API endpoints.
+## 📦 Installation & Setup
 
-MySQL → Relational database for secure data storage.
+Follow these steps to set up the project locally:
 
-RESTful APIs → Connects the frontend with backend services.
-
-AI Integration
-
-AI Assistant → Built with third-party APIs.
-
-Integrated into both frontend and backend for dynamic responses.
-
-🎨 Design Highlights
-
-Dark Mode First → Default dark UI with light mode toggle.
-
-Modern UI/UX → Glassmorphism effects, gradients, and smooth transitions.
-
-Accessibility → WCAG-compliant, ensuring better usability.
-
-Fully Responsive → Optimized for mobile, tablet, and desktop.
-
-📦 Installation & Setup
-1. Clone the repository
-git clone <repository-url>
+```bash
+# 1️⃣ Clone the repository
+git clone https://github.com/your-username/OriginTrace.git
 cd OriginTrace
 
-2. Install dependencies
+# 2️⃣ Install dependencies
 npm install
 
-3. Build Tailwind CSS
+# 3️⃣ Build Tailwind CSS
 npm run tailwind:build
 
-4. Configure Backend
+# 4️⃣ Configure the backend
+# Make sure you have PHP and Laravel installed.
+# Set up your local server (e.g., XAMPP, Laragon, or WAMP).
+# Create a MySQL database and import the provided schema.
+# Update your .env file with database credentials.
 
-Make sure you have PHP installed.
-
-Set up your local server (e.g., XAMPP, Laragon, or WAMP).
-
-Create a MySQL database and import the provided schema.
-
-Update your .env or config file with database credentials.
-
-5. Start development server
+# 5️⃣ Start the development server
 npm run dev
 
-6. Open your browser
-
-Visit: http://localhost:3000
-
-🚀 Available Scripts
-Command	Description
-npm run dev	Starts the development server
-npm run build	Builds the app for production
-npm run preview	Previews the production build
-npm run lint	Runs ESLint for code quality
-npm run tailwind:watch	Watches for Tailwind CSS changes
-npm run tailwind:build	Builds Tailwind CSS files
-📁 Project Structure
-OriginTrace/
-├── src/
-│   ├── components/          # Reusable UI components
-│   │   ├── Navbar.tsx      # Navigation bar
-│   │   └── Footer.tsx      # Footer section
-│   ├── pages/              # Main pages
-│   │   ├── Home.tsx        # Landing page
-│   │   ├── Marketplace.tsx # Device marketplace
-│   │   ├── DeviceCertification.tsx # Device inspection page
-│   │   └── About.tsx       # About us page
-│   ├── App.tsx             # Main React app component
-│   ├── main.tsx            # Entry point for React app
-│   ├── tailwind.css        # Tailwind base styles
-│   └── index.css           # Compiled CSS output
-├── public/                 # Static assets
-├── index.html              # Root HTML template
-├── package.json            # Project dependencies & scripts
-├── tailwind.config.js      # Tailwind configuration
-├── vite.config.ts          # Vite configuration
-└── README.md               # Project documentation
-
-🤖 AI Assistant Integration
-
-Built-in AI assistant helps users find devices, understand reports, and get instant answers.
-
-Connected to the backend via REST API.
-
-Fully integrated into the frontend interface for seamless interaction.
-
-🎯 Planned Features
-
- Seller & Buyer dashboards.
-
- Advanced device certification reports.
-
- AI-powered device recommendations.
-
- PDF export for inspection results.
-
- Integrated notification system.
-
- Full authentication with JWT.
-
- Mobile app version for Android & iOS.
-
-📄 License
-
-This project is licensed under the MIT License.
-
-Built with ❤️ using React, Vite, Tailwind, PHP Laravel & MySQL
+# 6️⃣ Open your browser
+http://localhost:3000
