@@ -1,61 +1,95 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Origin Trace System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Overview
 
-## About Laravel
+The *Origin Trace System* is a backend solution designed to ensure product quality verification, intelligent substitution, and blockchain-based warranty creation. The system allows users to submit product specifications, checks for available inventory or the closest AI-matched product, and returns the results along with a secure smart contract on the Internet Computer Protocol (ICP) blockchain.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🔧 Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- *User Specification Input:*  
+  Users can input detailed product specifications via a frontend interface.
 
-## Learning Laravel
+- *Operations Department Integration:*  
+  The system communicates with the Operations department via API to validate the request and log product data.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- *AI-Based Substitution:*  
+  If the requested product is unavailable, an AI model recommends the closest alternative based on the user's specifications.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- *Result Registration & Response:*  
+  The selected or recommended product is registered in the backend and sent back to the frontend for user confirmation.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- *Blockchain Warranty Creation:*  
+  A smart contract is created on the ICP blockchain to certify the product's origin and provide warranty coverage.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 📦 Architecture
 
-### Premium Partners
+```mermaid
+graph TD
+    A[User Frontend] -->|Submit Specs| B[Backend API]
+    B --> C[Operations Dept API]
+    B --> D[AI Matching Engine]
+    D --> E[Closest Product Match]
+    E --> F[Product Registry DB]
+    F --> G[Return Result to Frontend]
+    F --> H[Blockchain Contract - ICP]
+🔗 Technology Stack
+Frontend: React.js / Vue.js (customizable)
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Backend: Node.js / Express (or your backend framework)
 
-## Contributing
+AI Model: Python-based recommendation engine (can be ML/DL)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Blockchain: Internet Computer Protocol (ICP)
 
-## Code of Conduct
+Database: PostgreSQL / MongoDB / Firebase (depending on deployment)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+📡 API Flow
+POST /submit-product-specs
 
-## Security Vulnerabilities
+Payload: Product requirements from the user.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+GET /check-inventory
 
-## License
+Internal API checks available stock.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+POST /ai/match-product
+
+If not found, forwards data to AI engine.
+
+POST /blockchain/create-contract
+
+Registers product on ICP blockchain with warranty.
+
+GET /product-result
+
+Returns final matched product and contract info.
+
+✅ Example Use Case
+A user submits a specification for a medical device.
+
+The system checks the backend inventory.
+
+No exact match is found.
+
+AI engine recommends the closest match.
+
+The product is registered and a warranty contract is issued on ICP.
+
+The result is sent back to the user via frontend.
+
+🔐 Smart Contract (ICP)
+Each matched product is registered with:
+
+Product UUID
+
+Manufacturer Details
+
+Warranty Period
+
+Origin Signature
+
+All contract data is stored immutably on the Internet Computer blockchain to ensure traceability and trust.
